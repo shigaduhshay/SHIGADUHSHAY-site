@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<header> <link rel="stylesheet" href="../videoplayer.css">
+  <link rel="icon" href="../favicon.ico">
+</header>
+  <body>
+    
+
+
+    <div id="clickHere" class="clickHere" onclick="play_video();">
+      <p id="start" class="start">Click anywhere to start (browser limitation)</p>
+      </div>
+
+    <img class="Title" src="../images/shigaduhshay logo.png" alt="BAD BROWSER NOOB">
+
+    <div class="video-container">
+      <video src="../videos/IMG_7416.mov" id="myVideo">
+        video not supported
+      </video>
+      </div>
+
+</body>
+
+<script type='text/javascript'>
+  document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+  function myHandler(e) {
+      window.close();
+  }
+
+
+    function play_video()
+{
+
+document.getElementById("myVideo").play();
+var clickMeText = document.getElementById("clickHere");
+  clickMeText.innerHTML = "";
+} 
+
+</script>
+
+</html>

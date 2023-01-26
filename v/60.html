@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<header> <link rel="stylesheet" href="../videoplayer - fullscreen.css">
+  <link rel="icon" href="../favicon.ico">
+</header>
+  <body>
+    
+
+
+    <div id="clickHere" class="clickHere" onclick="play_video();">
+      <p id="start" class="start">Click here to begin.</p>
+      </div>
+
+    <img class="Title" id="Title" src="../images/shigaduhshay logo.png" alt="BAD BROWSER NOOB">
+
+    <div class="video-container">
+      <video src="../videos/hijB2I3WAmeyPKRv.mp4" id="myVideo">
+        video not supported
+      </video>
+      </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type='text/javascript'>
+
+  document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+  function myHandler(e) {
+      window.close();
+  }
+
+
+    function play_video()
+{
+
+
+  document.getElementById("myVideo").play();
+  var clickMeText = document.getElementById("clickHere");
+  clickMeText.innerHTML = "";
+
+  $('#Title').hide();
+
+  document.documentElement.requestFullscreen();
+};
+
+
+
+
+</script>
+
+</html>
