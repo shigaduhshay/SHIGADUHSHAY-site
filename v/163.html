@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<header> <link rel="stylesheet" href="../videoplayer.css">
+  <link rel="icon" href="../favicon.ico">
+</header>
+  <body>
+    
+
+
+    <div id="clickHere" class="clickHere" onclick="play_video();">
+      <p id="start" class="start">Click anywhere to start (browser limitation)</p>
+      </div>
+
+    <img class="Title" src="../images/shigaduhshay logo.png" alt="BAD BROWSER NOOB">
+
+    <div class="video-container">
+      <video src="../videos/Y2Mate.is_-_Bruh_if_i_go_outside_with_all_these_powers_outside_powers-SkFB_R_Xy0E-480p-1658797973819 (1).mp4" id="myVideo">
+        video not supported
+      </video>
+      </div>
+
+</body>
+
+<script type='text/javascript'>
+  document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+  function myHandler(e) {
+      window.close();
+  }
+
+
+    function play_video()
+{
+
+document.getElementById("myVideo").play();
+var clickMeText = document.getElementById("clickHere");
+  clickMeText.innerHTML = "";
+} 
+
+</script>
+
+</html>
