@@ -1,0 +1,1009 @@
+@charset "UTF-8";
+big {
+  big: "chungus";
+}
+
+/*
+In computer science, binary space partitioning (BSP) is a method for space partitioning which 
+recursively subdivides a Euclidean space into two convex sets by using hyperplanes as partitions. 
+This process of subdividing gives rise to a representation of objects within the space in the form of a tree data structure known as a BSP tree.
+
+Binary space partitioning was developed in the context of 3D computer graphics in 1969.[1][2] The structure of 
+a BSP tree is useful in rendering because it can efficiently give spatial information about the objects in a scene, 
+such as objects being ordered from front-to-back with respect to a viewer at a given location. Other applications of 
+BSP include: performing geometrical operations with shapes (constructive solid geometry) in CAD,[3] collision detection 
+in robotics and 3D video games, ray tracing, and other applications that involve the handling of complex spatial scenes.
+*/
+.box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.details {
+  border: 1px solid black;
+}
+
+.extended {
+  background: white;
+  border: 1px solid black;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.music {
+  background: lightgray;
+  color: #000;
+  border: 1px solid #999;
+  padding: 4px;
+}
+
+.rightHead {
+  background: #ffcc99;
+  padding-left: 4px;
+}
+
+.boxHead {
+  font-weight: bold;
+  background: #6699cc;
+  color: #ffffff;
+  padding: 4px 6px;
+}
+
+.userBtn {
+  display: inline-block;
+  zoom: 1;
+  font-size: small;
+  width: 39.5833333333%;
+  height: 25px;
+  padding-top: 7px;
+  padding-left: 10.4166666667%;
+  color: blue;
+  text-decoration: none;
+  background-repeat: no-repeat;
+}
+.userBtn:active {
+  color: darkblue;
+}
+.userBtn.disabled {
+  color: grey;
+}
+
+.send {
+  background-image: url("/static/img/send.png");
+  background-position: 11px 11px;
+}
+
+.friend {
+  background-image: url("/static/img/friend.png");
+  background-position: 6px 5px;
+}
+
+.unfriend {
+  background-image: url("/static/img/unfriend.png");
+  background-position: 5px 5px;
+}
+
+.report {
+  background-image: url("/static/img/report.png");
+  background-position: 3px 3px;
+}
+
+.block {
+  background-image: url("/static/img/block.png");
+  background-position: 11px 4px;
+}
+
+.siteHead a {
+  text-decoration: none;
+  color: #fff;
+}
+.siteHead .links {
+  background-color: #6699cc;
+  padding: 3px 10px;
+}
+
+.headTop {
+  background-color: #003399;
+  padding: 5px 10px;
+  border-bottom: 1px solid black;
+}
+.headTop #siteName {
+  font-weight: bold;
+}
+.headTop .right a {
+  margin: 0 2.5px;
+}
+.headTop .right a.newfriends {
+  color: violet;
+}
+.headTop .right a.newmail {
+  color: red;
+}
+.headTop .right a.funnyunlocked {
+  color: orange;
+}
+
+.userinfo {
+  float: left;
+  width: 37%;
+  padding: 0 1.5%;
+}
+
+.usermain {
+  width: 57%;
+  padding: 1.5%;
+  margin: auto;
+}
+
+.profile {
+  /*.userinfo {background:red;}
+  .usermain {background:green;}*/
+}
+.profile .short {
+  width: 100%;
+  min-width: 100%;
+}
+.profile .short .shortRight {
+  width: 50%;
+  padding-left: 20px;
+}
+.profile .short .avatar {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  _width: 150px;
+  max-height: 200px;
+}
+.profile .username {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .userinfo, .usermain {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .short .avatar {
+    margin-right: 20px;
+  }
+}
+.box.boxInfo {
+  border: 1px solid black;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.box.boxInfo .boxHead {
+  background: #6699cc;
+  color: white;
+  padding: 3px 4px;
+}
+
+.music .songNameContainer {
+  margin-bottom: 4px;
+}
+.music audio {
+  width: 100%;
+  height: 32px;
+  margin-bottom: -4px;
+  filter: sepia(0%) saturate(100%) grayscale(0) contrast(100%) invert(100%);
+}
+
+#topFriends > a {
+  display: inline-block;
+  width: 25%;
+  font-weight: bold;
+  vertical-align: top;
+  /* IE6 hack as usual.. */
+  _display: inline;
+  zoom: 1;
+}
+#topFriends > a .topFriend {
+  margin: 10px;
+}
+#topFriends > a .topFriend .username {
+  margin-bottom: 5px;
+}
+#topFriends > a .topFriend img {
+  max-width: 100%;
+}
+
+.infotable {
+  width: 100%;
+}
+.infotable th {
+  padding: 3px;
+  background: #BFDBFE;
+  color: #003399;
+  width: 33.3%;
+  text-align: left;
+}
+.infotable td {
+  padding: 3px;
+  background: #DBEAFE;
+}
+
+#infobottom {
+  margin-top: 12px;
+}
+
+.userlist {
+  /*display: grid;*/
+  width: 100%;
+}
+.userlist .userlistitem {
+  display: inline-block;
+  vertical-align: top;
+  width: 18%;
+  text-align: center;
+  box-sizing: border-box;
+  border: 6px solid #ffffff00;
+  padding: 10px;
+  margin: 1%;
+  background: #ffcc99;
+  /* IE6 HACK */
+  _display: inline;
+  zoom: 1;
+}
+.userlist .userlistitem img {
+  margin-top: 4px;
+  max-width: 100%;
+}
+
+.formbutton {
+  display: block;
+}
+.formbutton input[type=submit] {
+  display: block;
+  margin: 0 auto;
+}
+
+.pages {
+  margin-top: 1rem;
+  font-size: smaller;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .userlist .userlistitem {
+    font-size: 1.5em;
+    width: 46%;
+    margin: 2%;
+  }
+}
+textarea, .maxwidth {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+form.inline {
+  display: inline;
+}
+form.inline input[type=submit] {
+  display: inline-block;
+}
+
+.comments {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.commentHead {
+  margin: 16px 0;
+}
+
+.comment > td {
+  vertical-align: top;
+}
+.comment .commentAuthor {
+  background: #f93;
+  text-align: center;
+  padding: 10px;
+  width: 150px;
+}
+.comment .commentAuthor img {
+  margin-top: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+}
+.comment .commentContent {
+  background: #ffcc99;
+  padding: 10px;
+}
+.comment .commentContent .commentBottom {
+  margin-top: 4px;
+}
+.comment .commentContent time {
+  font-size: smaller;
+  /*display: block;
+  text-align: right;*/
+  float: right;
+}
+.comment .commentContent video, .comment .commentContent img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .comment .commentAuthor {
+    width: 75px;
+  }
+}
+#swaggerplayer .btn {
+  border: 1px solid grey;
+  width: 24px;
+  min-height: 32px;
+  width: 100%;
+  background-color: lightgrey;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+#swaggerplayer .btn:active {
+  background-color: darkgrey;
+}
+#swaggerplayer .pause {
+  background-image: url("/static/img/btn/pause.svg");
+}
+#swaggerplayer .play {
+  background-image: url("/static/img/btn/play.svg");
+}
+
+.music .thx {
+  float: right;
+  text-align: right;
+  font-size: 75%;
+}
+
+.pms ul#privmsgs, .pms ul#mboxes li, .pms .nomsgs {
+  background: #ffcc99;
+}
+.pms ul#mboxes {
+  float: left;
+  width: 24%;
+  padding: 0;
+  margin: 0;
+}
+.pms ul#mboxes li {
+  font-size: larger;
+  padding: 5px;
+  margin-bottom: 2px;
+  list-style: none;
+}
+.pms ul#privmsgs {
+  float: right;
+  width: 74%;
+  margin: 0;
+  padding: 0;
+}
+.pms ul#privmsgs > li {
+  margin: 10px 20px 10px 40px;
+  list-style-image: url(/static/img/send.png);
+}
+.pms .nomsgs {
+  float: right;
+  width: 74%;
+  text-align: center;
+  padding: 40px 0;
+}
+
+@media (max-width: 768px) {
+  .pms ul#mboxes, .pms ul#privmsgs, .pms .nomsgs {
+    width: 100%;
+    float: none;
+  }
+  .pms ul#privmsgs, .pms .nomsgs {
+    margin-top: 10px;
+    padding: 1px 0;
+  }
+}
+.privmsg, .sendpm {
+  background: #ffcc99;
+  padding: 20px;
+}
+
+.privmsg .markdown {
+  padding: 10px;
+  border: 1px solid black;
+  background: white;
+  margin: 10px 0;
+}
+
+.sendpm {
+  box-sizing: border-box;
+}
+.sendpm h1 {
+  margin-top: 0;
+}
+
+.sendpm table, table.pmtable {
+  width: 100%;
+}
+.sendpm table th, table.pmtable th {
+  width: 65px;
+}
+.sendpm table td, table.pmtable td {
+  padding: 0;
+}
+.sendpm table input, table.pmtable input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "DumbassIcons";
+  src: url("/static/font/DumbassIcons.ttf");
+}
+.username.theswag {
+  color: green;
+}
+
+.username.theswag:after, .username.woozy:after {
+  content: " 🥴";
+  color: white;
+  font-size: smaller;
+}
+
+.username.hmmst {
+  font-family: "Times New Roman", serif;
+  font-size: 110%;
+  text-shadow: 0 0 20px #0fc, 0 0 5px #0ff;
+}
+
+.verified::after {
+  font-weight: normal;
+  font-family: "DumbassIcons";
+  color: #17A3F2;
+  content: "v";
+}
+
+.username.verified::after {
+  margin-left: 4px;
+  display: inline-block;
+}
+
+.blog.profile article {
+  background: #6699cc;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+.blog.profile article > h1 {
+  margin-top: 0;
+}
+.blog.profile article > time {
+  font-weight: bold;
+  float: right;
+}
+.blog.profile .userinfo {
+  width: 32%;
+}
+.blog.profile .usermain {
+  width: 62%;
+}
+
+@media (max-width: 768px) {
+  .blog.profile .userinfo, .blog.profile .usermain {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+}
+.blog video, .blog img {
+  max-width: 100%;
+}
+
+.news .avatar {
+  max-height: 1em;
+  max-width: 1em;
+}
+
+.table {
+  display: table;
+  table-layout: fixed;
+}
+.table > div {
+  display: table-cell;
+  vertical-align: top;
+  padding: 10px;
+}
+.table.h {
+  width: 100%;
+}
+.table.h > div:not(:last-of-type) {
+  border-right-width: 0px;
+}
+
+.infobox > div {
+  border: 1px solid #003399;
+  background: #BFDBFE;
+}
+.infobox h3 {
+  margin: 0;
+}
+.infobox p {
+  margin: 5px 0;
+}
+
+#backupCodes {
+  font-size: 32px;
+  column-count: 2;
+  max-width: 512px;
+  margin: 16px auto;
+}
+
+#backupCodes s {
+  opacity: 0.5;
+}
+
+trololololo {
+  trolled: "problem?";
+}
+
+.userBtn.ownage {
+  background-image: url("/static/img/spoinkbub.png");
+  background-repeat: no-repeat;
+  background-position: 10px 6px;
+  font-size: 12px;
+}
+
+.userBtn.ownage:hover:after {
+  animation: blink 1s steps(1) infinite;
+  content: "_";
+}
+
+#trollmode {
+  background: linear-gradient(to bottom, #2A0050, #2A0050 80%, #003399) #2A0050;
+  padding: 4px;
+}
+#trollmode a {
+  text-decoration: none;
+  font-family: monospace;
+  color: #fff;
+  text-shadow: 0 1px #5F90CA;
+}
+
+form.trollmode {
+  display: inline;
+}
+form.trollmode input[type=submit] {
+  border: 0;
+  color: #fff;
+  background: none;
+  font-size: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.box.boxTroll {
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background: #15215a;
+  font-family: monospace;
+  color: #fff;
+  text-shadow: 0 1px #5F90CA;
+  border: 2px dashed #5f90ca;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.box.boxTroll a {
+  color: white;
+  text-decoration: none;
+}
+.box.boxTroll .boxHead {
+  font-size: 14px;
+  padding: 3px 4px;
+}
+.box.boxTroll .submit {
+  background-image: url(/static/img/damedane.jpg);
+  background-size: 100% 100%;
+  appearance: none;
+  height: 48px;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
+}
+.box.boxTroll textarea {
+  background: #1f3083;
+  font-family: monospace;
+  color: #fff;
+  text-shadow: 0 1px #5F90CA;
+  border: 0;
+  width: calc(100% - 8px);
+  margin: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+.box.boxTroll .trole {
+  opacity: 0.7;
+  font-size: 12px;
+}
+.box.boxTroll.trolled {
+  font-size: 16px;
+  background-color: #EA677B;
+  padding: 20px 20px;
+  text-align: center;
+  background-image: url(/static/img/spoinkbub.png);
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  background-position: calc(100% - 8px) calc(100% - 8px);
+}
+
+.__hidden {
+  font-size: 0px;
+}
+.__hidden:hover, .__hidden::before {
+  font-size: 12px;
+}
+.__hidden::before {
+  padding: 2px;
+  background: #15215a;
+  color: white;
+  content: attr(data-hidden);
+}
+
+/* problem? */
+/* You are fail and cringe. Die */
+/*body:not(.hd) {
+  image-rendering: optimizeSpeed;
+  image-rendering: pixelated;
+}*/
+/*body.hd {
+  image-rendering: optimizeQuality;
+  image-rendering: high-quality;
+}*/
+head, body {
+  margin: 0;
+  background: white;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+  word-wrap: anywhere;
+}
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h3 {
+  margin: 1em 0;
+}
+
+h4 {
+  color: #cc6633;
+  margin-bottom: 0px;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+dl dt {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+dl dd {
+  margin-left: 20px;
+}
+
+.small {
+  font-size: smaller;
+}
+
+.big {
+  font-size: larger;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+footer {
+  margin: 1em 0;
+  text-align: center;
+  font-size: smaller;
+}
+
+.right {
+  float: right;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.links .short {
+  display: none;
+}
+
+.autoplaynotice {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid #ff0;
+  background: #ffffbb;
+}
+
+/* oh? trolling? */
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+blink, .blink {
+  -webkit-animation: blink 1s steps(1) infinite;
+  -moz-animation: blink 1s steps(1) infinite;
+  -o-animation: blink 1s steps(1) infinite;
+  animation: blink 1s steps(1) infinite;
+}
+
+/*blockquote {
+  border-left: 4px solid grey;
+  margin: 15px 10px;
+  padding: 3px 10px;
+}*/
+/* you suck!!! */
+.cringepilled:before, .cringepilled:after {
+  content: "";
+  display: table;
+}
+
+.cringepilled:after {
+  clear: both;
+}
+
+.cringepilled {
+  zoom: 1;
+}
+
+table.lefttable th {
+  text-align: left;
+}
+
+.markdown.nomargin p:first-child {
+  margin-top: 0;
+}
+.markdown.nomargin p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .links .long {
+    display: none;
+  }
+  .links .short {
+    display: inline;
+  }
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#banner {
+  padding: 4px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+q::before, q::after {
+  content: '"';
+}
+
+.siteHead .skip-nav-link {
+  color: black;
+  background: white;
+  padding: 2px;
+  position: absolute;
+  top: -100%;
+}
+
+.siteHead .skip-nav-link:focus {
+  top: 0;
+}
+
+.markdownSupported {
+  background-image: url(/static/img/markdown.png);
+  background-position: top 2px right 2px;
+  background-repeat: no-repeat;
+}
+
+/* selectable, but invisible */
+.invisible {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=dame.css.map */
+
+
+
+* {
+    image-rendering: pixelated;
+    image-rendering: optimizeSpeed;
+   }
+   
+   body, textarea, .music {
+    font-family: monospace;
+    background: #390016;
+    color: #e4d1b9;
+   }
+   
+   @keyframes calcal
+   {
+    from { background-position: 0px 0ox; }
+    to { background-position: 1024px 1024px; }
+   }
+   /*apologies for the copypaste's, too lazy to make this a container..*/
+   
+   .backa
+   {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+   
+    background: url("https://kiatus.staropa.net/other/faunoi.gif");
+    width: 100%;
+    height: 100%;
+    animation: calcal 40s infinite linear;
+   }
+   
+   .backb
+   {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+   
+    background: url("https://kiatus.staropa.net/other/faunoi.gif");
+    width: 100%;
+    height: 100%;
+    transform: scaleY(-1);
+    transform: scaleX(-1);
+    animation: calcal 30s infinite linear reverse;
+    z-index: -2;
+   }
+   
+   textarea { margin-top: 4px; }
+   
+   .rightHead, .commentHead, .boxHead {
+    background: none;
+    color: #e4d1b9;
+    text-align: center;
+    border-style: solid none solid none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+   }
+   
+   .rightHead::before, .commentHead::before, .boxHead::before {
+    content: '~';
+   }
+   .rightHead::after, .commentHead::after, .boxHead::after {
+    content: '~';
+   }
+   
+   h4 {
+    color: #ea92b3;
+    text-decoration: underline;
+    text-align: center;
+   }
+   .comment .commentContent, .comment .commentAuthor {
+    background: none;
+    color #e4d1b9;
+    border-style: double;
+   }
+   
+   .box, .infotable, .infotable th, .infotable td {
+    background: none;
+    border: none;
+   }
+   
+   .infotable th { color: #ea92b3; }
+   
+   a, a.userBtn { color: #7de4b9; text-decoration: none; }
+   a:hover, a.userBtn:hover {
+    text-decoration: underline;
+    filter: drop-shadow(0.5px 0.5px 0 white) drop-shadow(-0.5px 0.5px 0 white) drop-shadow(0.5px -0.5px 0 white) drop-shadow(-0.5px -0.5px 0 white);
+   }
+   
+   /*topbar*/
+   .headTop, .siteHead .links {
+    border:none;
+    background: none;
+   }
+   
+   [src="/static/img/online.gif"] {
+    content: url("https://kiatus.staropa.net/other/online.gif");
+   }
+   h2.username::after {
+    margin-top: 0;
+    font-size: 10px;
+    content: "\A(also known as florea)";
+    white-space: pre;
+   }
+   .Title {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+
+
+
+  

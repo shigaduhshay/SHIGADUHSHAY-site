@@ -1,0 +1,8 @@
+blink, .blink {
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  animation: none !important;
+}
+
+/*# sourceMappingURL=reducedmotion.css.map */
