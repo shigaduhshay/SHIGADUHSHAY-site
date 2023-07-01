@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<header> <link rel="stylesheet" href="../videoplayer - fullscreen.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD4THBX204"></script>
+  <link rel="javascript" href="../Analytics.js">
+  <link rel="icon" href="../favicon.ico">
+</header>
+  <body>
+  <style>
+    p{
+      opacity: 0;
+    }
+    .Imag {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%; 
+      overflow: hidden;
+      z-index: -1;
+      opacity: 0;
+    }
+  </style>
+  <div class="video-container">
+    <video src="../videos/lain.mp4" id="myVideo" muted autoplay>
+      video not supported
+    </video>
+    </div>
+
+</body>
+<footer class="footer">
+  <audio autoplay src="../audio/letsalllovelain.mp3"></audio>
+</footer>
+
+<script src="https://h3.neocities.org/autoplay_enable.js"></script>
+
+<p>Serial Experiments Lain</p>
+
+<script type='text/javascript'>
+  document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+  function myHandler(e) {
+      window.close();
+  }
+</script>
+
+</html>
